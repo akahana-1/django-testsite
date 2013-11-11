@@ -1,0 +1,8 @@
+<h1>ログインフォーム</h1>
+
+<form action="/management/login/" method="post" autocomplete="off">
+{% csrf_token %}
+	<input type="text" name="userid" /> <br />
+	<input type="password" name="pass" /><br />
+	<input type="submit" value="ログイン">
+</form>

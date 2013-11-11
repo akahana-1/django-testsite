@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+ユーザー登録フォーム
+<form action = "/management/useradd/" method = "post" autocomplete = "off">
+<table>
+{% csrf_token %}
+<tr><td>ID</td><td><input type = "text" name = "userid"></td></tr>
+<tr><td>パスワード</td><td><input type = "password" name = "pass"></td></tr>
+<tr><td>パスワード(確認)</td><td><input type = "password" name = "rpass"</td></tr>
+<tr><td>姓(漢字)</td><td><input type = "text" name = "lname"></td></tr>
+<tr><td>名(漢字)</td><td><input type = "text" name = "fname"></td></tr>
+<tr><td>性別</td><td><input type = "radio" name = "gender" value = 0 checked = "checked"><label>男性</label></td></tr>
+<tr><td></td><td><input type = "radio" name = "gender" value = 1><label>女性</label></td></tr>
+<tr><td>学籍番号</td><td>r<input type = "text" name = "number" maxlength = 6></td></tr>
+
+</table>
+<input type = "submit" value = 登録>
+</form>
+</body>
+</html>
